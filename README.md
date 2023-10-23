@@ -4,8 +4,8 @@ This repository contains templates for various Astro sites utilizing SST for dep
 
 ## Templates
 
-- [Astro in SSR Mode](./apps/astro-ssr/) - Primarily server-side rendered Astro site deployed with SST.
-- [Astro in Hybrid Mode](./apps/astro-hybrid/) - Primarily statically generated Astro site deployed with SST.
+- [Astro in SSR Mode](./templates/astro-ssr/) - Primarily server-side rendered Astro site deployed with SST.
+- [Astro in Hybrid Mode](./templates/astro-hybrid/) - Primarily statically generated Astro site deployed with SST.
 
 ## Dev
 
