@@ -6,6 +6,7 @@
     "dev": "sst bind astro dev --stage astro-sst-ssr --port 3001",
     "build": "sst bind astro build --stage astro-sst-ssr",
     "deploy": "sst deploy --stage astro-sst-ssr",
+    "remove": "sst remove --stage astro-sst-ssr",
     "lint": "eslint .",
     "fmt": "prettier . --write"
   },

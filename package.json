@@ -11,7 +11,10 @@
     "build:hybrid": "turbo run build --filter=astro-sst-hybrid",
     "deploy": "turbo run deploy --concurrency=1",
     "deploy:ssr": "turbo run deploy --filter=astro-sst-ssr",
-    "deploy:hybrid": "turbo run deploy --filter=astro-sst-hybrid"
+    "deploy:hybrid": "turbo run deploy --filter=astro-sst-hybrid",
+    "remove": "turbo run remove --concurrency=1",
+    "remove:ssr": "turbo run remove --filter=astro-sst-ssr",
+    "remove:hybrid": "turbo run remove --filter=astro-sst-hybrid"
   },
   "devDependencies": {
     "turbo": "latest"
