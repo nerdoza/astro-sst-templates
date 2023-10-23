@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "lint": "turbo run lint",
+    "fmt": "turbo run fmt",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:ssr": "turbo run dev --filter=astro-sst-ssr",
+    "dev:hybrid": "turbo run dev --filter=astro-sst-hybrid",
+    "build:ssr": "turbo run build --filter=astro-sst-ssr",
+    "build:hybrid": "turbo run build --filter=astro-sst-hybrid",
+    "deploy": "turbo run deploy --concurrency=1",
+    "deploy:ssr": "turbo run deploy --filter=astro-sst-ssr",
+    "deploy:hybrid": "turbo run deploy --filter=astro-sst-hybrid"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "name": "astro-sst-templates",
+  "packageManager": "npm@9.8.1",
+  "workspaces": [
+    "apps/*"
+  ]
+}
