@@ -6,17 +6,16 @@ export async function getStaticPaths() {
   const blogEntries = await getCollection('blog')
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
-    props: { entry, mode: import.meta.env.MODE }
+    props: { entry }
   }))
 }
 
-const { entry, mode } = Astro.props
+const { entry } = Astro.props
 
 const { Content } = await entry.render()
 ---
 
 <BlogPost {...entry.data}>
   <h1>{entry.data.title}</h1>
-  <p><em>{mode}</em></p>
   <Content />
 </BlogPost>
