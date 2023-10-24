@@ -8,7 +8,7 @@ const SITE_HOST = process.env.VITE_SITE_HOST ?? ''
 export default {
   config(_input) {
     return {
-      name: 'astro-sst-template-ssr',
+      name: 'astro-sst-template-hybrid',
       region: 'us-west-2',
       profile: 'sst',
       bootstrap: {
