@@ -29,7 +29,6 @@ export default {
 
     app.stack(function Site({ stack }) {
       const site = new AstroSite(stack, 'astro-sst-static', {
-        memorySize: '128 MB',
         customDomain: {
           domainName: `${app.stage}.${SITE_HOST}`,
           hostedZone: SITE_HOST

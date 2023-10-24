@@ -3,7 +3,7 @@ import prefetch from '@astrojs/prefetch'
 import robotsTxt from 'astro-robots-txt'
 import { Config } from 'sst/node/config'
 import sitemap from '@astrojs/sitemap'
-import aws from 'astro-sst/lambda'
+import aws from 'astro-sst/static'
 import mdx from '@astrojs/mdx'
 
 const site = import.meta.env.DEV
@@ -24,8 +24,5 @@ export default defineConfig({
     '/old-blog/': '/blog',
     '/old-blog/[...slug]': '/blog/[...slug]'
   },
-  adapter: aws({
-    responseMode: 'buffer',
-    serverRoutes: ['/register', '/methods.json']
-  })
+  adapter: aws()
 })

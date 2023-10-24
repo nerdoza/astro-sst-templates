@@ -9,7 +9,9 @@
         "dist/**"
       ]
     },
-    "deploy": {},
+    "deploy": {
+      "cache": false
+    },
     "remove": {},
     "lint": {},
     "fmt": {},
