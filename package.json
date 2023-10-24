@@ -13,17 +13,21 @@
     "dev:ssr": "turbo run dev --filter=astro-sst-ssr",
     "dev:hybrid": "turbo run dev --filter=astro-sst-hybrid",
     "dev:streamed": "turbo run dev --filter=astro-sst-streamed",
+    "dev:static": "turbo run dev --filter=astro-sst-static",
     "build:ssr": "turbo run build --filter=astro-sst-ssr",
     "build:hybrid": "turbo run build --filter=astro-sst-hybrid",
     "build:streamed": "turbo run build --filter=astro-sst-streamed",
+    "build:static": "turbo run build --filter=astro-sst-static",
     "deploy": "turbo run deploy --concurrency=1",
     "deploy:ssr": "turbo run deploy --filter=astro-sst-ssr",
     "deploy:hybrid": "turbo run deploy --filter=astro-sst-hybrid",
     "deploy:streamed": "turbo run deploy --filter=astro-sst-streamed",
+    "deploy:static": "turbo run deploy --filter=astro-sst-static",
     "remove": "turbo run remove --concurrency=1",
     "remove:ssr": "turbo run remove --filter=astro-sst-ssr",
     "remove:hybrid": "turbo run remove --filter=astro-sst-hybrid",
-    "remove:streamed": "turbo run remove --filter=astro-sst-streamed"
+    "remove:streamed": "turbo run remove --filter=astro-sst-streamed",
+    "remove:static": "turbo run remove --filter=astro-sst-static"
   },
   "devDependencies": {
     "turbo": "latest"

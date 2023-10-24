@@ -8,7 +8,7 @@ const SITE_HOST = process.env.VITE_SITE_HOST ?? ''
 export default {
   config(_input) {
     return {
-      name: 'astro-sst-template-streamed',
+      name: 'astro-sst-template-static',
       region: 'us-west-2',
       profile: 'sst',
       bootstrap: {
@@ -28,7 +28,7 @@ export default {
     Tags.of(app).add('Stack', 'Astro + SST Templates')
 
     app.stack(function Site({ stack }) {
-      const site = new AstroSite(stack, 'astro-sst-streamed', {
+      const site = new AstroSite(stack, 'astro-sst-static', {
         memorySize: '128 MB',
         customDomain: {
           domainName: `${app.stage}.${SITE_HOST}`,
