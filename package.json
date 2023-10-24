@@ -1,5 +1,10 @@
 {
+  "name": "astro-sst-templates",
   "private": true,
+  "type": "module",
+  "workspaces": [
+    "templates/*"
+  ],
   "scripts": {
     "lint": "turbo run lint",
     "fmt": "turbo run fmt",
@@ -23,9 +28,5 @@
   "devDependencies": {
     "turbo": "latest"
   },
-  "name": "astro-sst-templates",
-  "packageManager": "npm@9.8.1",
-  "workspaces": [
-    "templates/*"
-  ]
+  "packageManager": "npm@9.8.1"
 }
