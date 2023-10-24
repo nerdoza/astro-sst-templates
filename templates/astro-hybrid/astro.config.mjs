@@ -8,7 +8,7 @@ import mdx from '@astrojs/mdx'
 
 const site = import.meta.env.DEV
   ? 'http://localhost:3000'
-  : `https://${Config.STAGE}.${import.meta.env.SITE_HOST}`
+  : `https://${Config.STAGE}.${import.meta.env.VITE_SITE_HOST}`
 
 const crawlerPolicy = [{ userAgent: '*', disallow: ['/'] }]
 

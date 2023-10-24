@@ -3,7 +3,7 @@ import type { SSTConfig } from 'sst'
 import { Tags } from 'aws-cdk-lib'
 import 'dotenv/config'
 
-const SITE_HOST = process.env.SITE_HOST ?? 'failed-to-load-env'
+const SITE_HOST = process.env.VITE_SITE_HOST ?? ''
 
 export default {
   config(_input) {
