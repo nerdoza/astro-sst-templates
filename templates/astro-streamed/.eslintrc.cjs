@@ -1,4 +1,6 @@
 module.exports = {
+  root: true,
+  moduleResolution: 'node16',
   extends: [
     'standard-with-typescript',
     'plugin:astro/recommended',
@@ -8,6 +10,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
     extraFileExtensions: ['.astro']
   },
   rules: {
