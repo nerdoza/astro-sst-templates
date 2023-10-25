@@ -1,14 +1,13 @@
 import { defineConfig } from 'astro/config'
 import prefetch from '@astrojs/prefetch'
 import robotsTxt from 'astro-robots-txt'
-import { Config } from 'sst/node/config'
 import sitemap from '@astrojs/sitemap'
 import aws from 'astro-sst/static'
 import mdx from '@astrojs/mdx'
 
 const site = import.meta.env.DEV
   ? 'http://localhost:3000'
-  : `https://${Config.STAGE}.${import.meta.env.VITE_SITE_HOST}`
+  : import.meta.env.VITE_SITE_URL
 
 const crawlerPolicy = [{ userAgent: '*', disallow: ['/'] }]
 

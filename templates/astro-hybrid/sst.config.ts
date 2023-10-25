@@ -1,14 +1,16 @@
 import { AstroSite } from 'sst/constructs'
 import type { SSTConfig } from 'sst'
 import { Tags } from 'aws-cdk-lib'
-import 'dotenv/config'
 
-const SITE_HOST = process.env.VITE_SITE_HOST ?? ''
+const SITE_HOST = process.env.SITE_HOST ?? ''
+const SITE_DOMAIN = `astro-hybrid.${SITE_HOST}`
+const SITE_URL = `https://${SITE_DOMAIN}`
 
 export default {
   config(_input) {
     return {
-      name: 'astro-sst-template-hybrid',
+      name: 'astro-sst-templates',
+      stage: 'hybrid',
       region: 'us-west-2',
       profile: 'sst',
       bootstrap: {
@@ -31,8 +33,14 @@ export default {
       const site = new AstroSite(stack, 'astro-sst-hybrid', {
         memorySize: '128 MB',
         customDomain: {
-          domainName: `${app.stage}.${SITE_HOST}`,
+          domainName: SITE_DOMAIN,
           hostedZone: SITE_HOST
+        },
+        environment: {
+          VITE_SITE_URL: SITE_URL,
+          SECRET_KEY: 'secret-key',
+          VITE_KEY: 'vite-key',
+          PUBLIC_KEY: 'public-key'
         }
       })
       stack.addOutputs({
