@@ -1,7 +1,7 @@
 {
   "name": "astro-sst-hybrid",
+  "private": true,
   "type": "module",
-  "version": "0.0.0",
   "scripts": {
     "dev": "sst bind astro dev",
     "build": "sst bind astro build",

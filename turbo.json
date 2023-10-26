@@ -15,7 +15,9 @@
     "deploy": {
       "cache": false
     },
-    "remove": {},
+    "remove": {
+      "cache": false
+    },
     "lint": {},
     "fmt": {},
     "dev": {

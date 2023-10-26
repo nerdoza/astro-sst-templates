@@ -2,15 +2,16 @@ import { AstroSite } from 'sst/constructs'
 import type { SSTConfig } from 'sst'
 import { Tags } from 'aws-cdk-lib'
 
+const STAGE = 'streamed'
 const SITE_HOST = process.env.SITE_HOST ?? ''
-const SITE_DOMAIN = `astro-hybrid.${SITE_HOST}`
+const SITE_DOMAIN = `astro-${STAGE}.${SITE_HOST}`
 const SITE_URL = `https://${SITE_DOMAIN}`
 
 export default {
   config(_input) {
     return {
-      name: 'astro-sst-template',
-      stage: 'streamed',
+      name: 'astro-sst-templates',
+      stage: STAGE,
       region: 'us-west-2',
       profile: 'sst',
       bootstrap: {
@@ -30,7 +31,7 @@ export default {
     Tags.of(app).add('Stack', 'Astro + SST Templates')
 
     app.stack(function Site({ stack }) {
-      const site = new AstroSite(stack, 'astro-sst-streamed', {
+      const site = new AstroSite(stack, `astro-sst-${STAGE}`, {
         memorySize: '128 MB',
         customDomain: {
           domainName: SITE_DOMAIN,
