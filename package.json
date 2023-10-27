@@ -18,12 +18,12 @@
     "build:hybrid": "dotenv -- turbo run build --filter=astro-sst-hybrid",
     "build:streamed": "dotenv -- turbo run build --filter=astro-sst-streamed",
     "build:static": "dotenv -- turbo run build --filter=astro-sst-static",
-    "deploy": "dotenv -- turbo run deploy --concurrency=1",
+    "deploy": "dotenv -- turbo run deploy --concurrency=1 --continue",
     "deploy:ssr": "dotenv -- turbo run deploy --filter=astro-sst-ssr",
     "deploy:hybrid": "dotenv -- turbo run deploy --filter=astro-sst-hybrid",
     "deploy:streamed": "dotenv -- turbo run deploy --filter=astro-sst-streamed",
     "deploy:static": "dotenv -- turbo run deploy --filter=astro-sst-static",
-    "remove": "dotenv -- turbo run remove --concurrency=1",
+    "remove": "dotenv -- turbo run remove --concurrency=1 --continue",
     "remove:ssr": "dotenv -- turbo run remove --filter=astro-sst-ssr",
     "remove:hybrid": "dotenv -- turbo run remove --filter=astro-sst-hybrid",
     "remove:streamed": "dotenv -- turbo run remove --filter=astro-sst-streamed",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^6.9.0",
-    "astro-sst": "2.31.0",
+    "astro-sst": "2.32.2",
     "aws-cdk-lib": "2.101.1",
     "constructs": "10.2.69",
     "dotenv-cli": "^7.3.0",
@@ -51,7 +51,7 @@
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "prettier-plugin-sort-imports": "^1.7.2",
-    "sst": "2.31.0",
+    "sst": "2.32.2",
     "turbo": "latest"
   },
   "packageManager": "npm@9.8.1"
