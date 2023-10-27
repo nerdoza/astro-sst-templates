@@ -1,5 +1,5 @@
 {
-  "name": "astro-sst-static",
+  "name": "astro-static",
   "private": true,
   "type": "module",
   "scripts": {

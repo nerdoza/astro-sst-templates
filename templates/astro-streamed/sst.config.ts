@@ -10,7 +10,7 @@ const SITE_URL = `https://${SITE_DOMAIN}`
 export default {
   config(_input) {
     return {
-      name: 'astro-sst-templates',
+      name: 'astro-templates',
       stage: STAGE,
       region: 'us-west-2',
       profile: 'sst',
@@ -31,7 +31,7 @@ export default {
     Tags.of(app).add('Stack', 'Astro + SST Templates')
 
     app.stack(function Site({ stack }) {
-      const site = new AstroSite(stack, `astro-sst-${STAGE}`, {
+      const site = new AstroSite(stack, `astro-${STAGE}`, {
         memorySize: '128 MB',
         customDomain: {
           domainName: SITE_DOMAIN,
