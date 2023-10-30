@@ -8,7 +8,10 @@ export const onRequest = defineMiddleware(async (_, next) => {
   response.headers.set('Cache-Control', 'private, max-age=0, no-cache')
   const responseContentType = response.headers.get('content-type') ?? ''
 
-  if (stringIncludesAny(responseContentType, ['text/html', 'text/css'])) {
+  if (
+    stringIncludesAny(responseContentType, ['text/html', 'text/css']) &&
+    !stringIncludesAny(responseContentType, ['charset'])
+  ) {
     response.headers.set(
       'content-type',
       `${responseContentType}; charset=UTF-8`
