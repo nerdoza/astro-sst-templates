@@ -1,3 +1,3 @@
-export const SITE_TITLE = 'Astro + SST: SSR'
+export const SITE_TITLE = 'Astro + SST: Edge'
 export const SITE_DESCRIPTION =
-  'Astro with server-side rendering deployed using SST.'
+  'Astro with edge based server-side rendering deployed using SST.'
