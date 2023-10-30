@@ -24,8 +24,5 @@ export default defineConfig({
     '/old-blog/': '/blog',
     '/old-blog/[...slug]': '/blog/[...slug]'
   },
-  adapter: aws({
-    // responseMode: 'buffer',
-    // serverRoutes: ['/register', '/methods.json']
-  })
+  adapter: aws()
 })
