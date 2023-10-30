@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "sst bind astro dev",
-    "build": "sst bind astro build",
+    "build": "astro build",
     "deploy": "sst deploy",
     "remove": "sst remove",
     "lint": "eslint .",
