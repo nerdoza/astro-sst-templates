@@ -2,8 +2,8 @@ import { defineConfig } from 'astro/config'
 import prefetch from '@astrojs/prefetch'
 import robotsTxt from 'astro-robots-txt'
 import sitemap from '@astrojs/sitemap'
-import aws from 'astro-sst/edge'
 import mdx from '@astrojs/mdx'
+import aws from 'astro-sst'
 
 const site = import.meta.env.DEV
   ? 'http://localhost:3000'
@@ -24,5 +24,7 @@ export default defineConfig({
     '/old-blog/': '/blog',
     '/old-blog/[...slug]': '/blog/[...slug]'
   },
-  adapter: aws()
+  adapter: aws({
+    deploymentStrategy: 'edge'
+  })
 })
