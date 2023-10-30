@@ -1,0 +1,13 @@
+{
+  "name": "astro-edge",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sst bind astro dev",
+    "build": "astro build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "lint": "eslint .",
+    "fmt": "prettier . --write"
+  }
+}

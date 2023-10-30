@@ -8,6 +8,7 @@ This repository contains templates for various Astro sites utilizing SST for dep
 - [Astro in Hybrid Mode](./templates/astro-hybrid/) - Primarily statically generated Astro site deployed with SST.
 - [Astro in Streamed SSR Mode](./templates/astro-streamed/) - Primarily streamed server-side rendered Astro site deployed with SST.
 - [Astro in Static Mode](./templates/astro-static/) - Completely statically generated Astro site deployed with SST.
+- [Astro in SSR Edge Mode](./templates/astro-edge/) - Primarily Lamda@Edge server-side rendered Astro site deployed with SST.
 
 ## Dev
 
@@ -24,6 +25,7 @@ npm run dev:ssr
 npm run dev:hybrid
 npm run dev:streamed
 npm run dev:static
+npm run dev:edge
 ```
 
 ## Build
@@ -41,6 +43,7 @@ npm run build:ssr
 npm run build:hybrid
 npm run build:streamed
 npm run build:static
+npm run build:edge
 ```
 
 To force a rebuild of a template (useful when dependencies change):
@@ -51,6 +54,7 @@ npm run build:ssr -- --force
 npm run build:hybrid -- --force
 npm run build:streamed -- --force
 npm run build:static -- --force
+npm run build:edge -- --force
 ```
 
 ## Deploy
@@ -68,4 +72,5 @@ npm run deploy:ssr
 npm run deploy:hybrid
 npm run deploy:streamed
 npm run deploy:static
+npm run deploy:edge
 ```
