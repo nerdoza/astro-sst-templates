@@ -1,7 +1,9 @@
 ---
-const factResponse = await fetch('https://catfact.ninja/fact')
-const factData = await factResponse.json()
-await new Promise((resolve) => setTimeout(resolve, 2000))
+const delayedPromise = new Promise((resolve) => setTimeout(resolve, 2000))
+const factData = fetch('https://catfact.ninja/fact')
+  .then((response) => response.json())
+  .then((factData) => factData.fact)
 ---
 
-<p>{factData.fact}</p>
+<p>{factData}</p>
+{delayedPromise}
