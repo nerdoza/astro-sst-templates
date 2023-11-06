@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "@builder.io/qwik": "^1.2.17",
-    "@qwikdev/astro": "^0.0.26"
+    "@qwikdev/astro": "^0.0.27"
   }
 }
