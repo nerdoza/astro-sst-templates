@@ -1,6 +1,6 @@
 import { AstroSite } from 'sst/constructs'
 import type { SSTConfig } from 'sst'
-import { Tags, aws_lambda } from 'aws-cdk-lib'
+import { Tags } from 'aws-cdk-lib'
 
 const STAGE = 'assets'
 const SITE_HOST = process.env.SITE_HOST ?? ''
@@ -42,27 +42,6 @@ export default {
           SECRET_KEY: 'secret-key',
           VITE_KEY: 'vite-key',
           PUBLIC_KEY: 'public-key'
-        },
-        cdk: {
-          server: {
-            nodejs: {
-              esbuild: {
-                external: ['sharp'],
-              },
-            },
-            layers: [
-              new aws_lambda.LayerVersion(stack, 'sharp', {
-                /**
-                 * This is a prebuilt layer for sharp.
-                 * Version: 0.32.6
-                 * Source: https://github.com/pH200/sharp-layer
-                 */
-                code: aws_lambda.Code.fromAsset('./layers/sharp.zip'),
-                compatibleRuntimes: [aws_lambda.Runtime.NODEJS_16_X, aws_lambda.Runtime.NODEJS_18_X],
-                compatibleArchitectures: [aws_lambda.Architecture.ARM_64, aws_lambda.Architecture.X86_64]
-              })
-            ]
-          }
         }
       })
       stack.addOutputs({
