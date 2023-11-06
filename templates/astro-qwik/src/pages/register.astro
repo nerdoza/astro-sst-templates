@@ -1,0 +1,57 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+
+export const prerender = false
+
+const registration = { name: '' }
+if (Astro.request.method === 'POST') {
+  try {
+    const data = await Astro.request.formData()
+    const name = data.get('username')
+    if (typeof name === 'string' && name.length > 0) {
+      registration.name = name
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message)
+    }
+  }
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <h1>Register</h1>
+      {
+        registration.name && (
+          <p>
+            Thank you for registering, <strong>{registration.name}</strong>!
+          </p>
+        )
+      }
+      {
+        !registration.name && (
+          <form method="POST">
+            <div>
+              <label>
+                Username:
+                <input type="text" name="username" />
+              </label>
+            </div>
+            <button>Register</button>
+          </form>
+        )
+      }
+    </main>
+    <Footer />
+  </body>
+</html>
