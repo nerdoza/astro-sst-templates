@@ -9,6 +9,8 @@ const site = import.meta.env.DEV
   ? 'http://localhost:3000'
   : import.meta.env.VITE_SITE_URL
 
+const siteUrl = new URL(site)
+
 const crawlerPolicy = [{ userAgent: '*', disallow: ['/'] }]
 
 export default defineConfig({
@@ -19,6 +21,16 @@ export default defineConfig({
     prefetch(),
     robotsTxt({ policy: crawlerPolicy })
   ],
+  image: {
+    remotePatterns: [
+      {
+        protocol: siteUrl.protocol,
+        hostname: siteUrl.hostname,
+        port: siteUrl.port,
+        path: '/_astro/**'
+      }
+    ]
+  },
   output: 'server',
   redirects: {
     '/old-blog/': '/blog',
