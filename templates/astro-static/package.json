@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "sst bind astro dev",
     "build": "astro build",
+    "build:bind": "sst bind astro build",
     "deploy": "sst deploy",
     "remove": "sst remove",
     "lint": "eslint .",

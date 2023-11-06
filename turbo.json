@@ -12,6 +12,11 @@
         "dist/**"
       ]
     },
+    "build:bind": {
+      "outputs": [
+        "dist/**"
+      ]
+    },
     "deploy": {
       "cache": false
     },
