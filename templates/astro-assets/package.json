@@ -1,0 +1,14 @@
+{
+  "name": "astro-assets",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sst bind astro dev",
+    "build": "astro build",
+    "build:bind": "sst bind astro build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "lint": "eslint .",
+    "fmt": "prettier . --write"
+  }
+}
