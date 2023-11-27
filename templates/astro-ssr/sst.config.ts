@@ -32,7 +32,7 @@ export default {
 
     app.stack(function Site({ stack }) {
       const site = new AstroSite(stack, `astro-${STAGE}`, {
-        memorySize: '128 MB',
+        memorySize: '1024 MB',
         customDomain: {
           domainName: SITE_DOMAIN,
           hostedZone: SITE_HOST
