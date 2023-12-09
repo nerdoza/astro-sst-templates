@@ -23,7 +23,7 @@
     "build:edge": "dotenv -- turbo run build:bind --filter=astro-edge",
     "build:assets": "dotenv -- turbo run build:bind --filter=astro-assets",
     "build:starlight": "dotenv -- turbo run build:bind --filter=astro-starlight",
-    "deploy": "dotenv -- turbo run deploy --concurrency=1 --continue",
+    "deploy": "dotenv -- turbo run deploy --concurrency=2 --continue",
     "deploy:ssr": "dotenv -- turbo run deploy --filter=astro-ssr",
     "deploy:hybrid": "dotenv -- turbo run deploy --filter=astro-hybrid",
     "deploy:streamed": "dotenv -- turbo run deploy --filter=astro-streamed",
@@ -31,7 +31,7 @@
     "deploy:edge": "dotenv -- turbo run deploy --filter=astro-edge",
     "deploy:assets": "dotenv -- turbo run deploy --filter=astro-assets",
     "deploy:starlight": "dotenv -- turbo run deploy --filter=astro-starlight",
-    "remove": "dotenv -- turbo run remove --concurrency=1 --continue",
+    "remove": "dotenv -- turbo run remove --concurrency=2 --continue",
     "remove:ssr": "dotenv -- turbo run remove --filter=astro-ssr",
     "remove:hybrid": "dotenv -- turbo run remove --filter=astro-hybrid",
     "remove:streamed": "dotenv -- turbo run remove --filter=astro-streamed",
@@ -41,12 +41,12 @@
     "remove:starlight": "dotenv -- turbo run remove --filter=astro-starlight"
   },
   "dependencies": {
-    "@astrojs/mdx": "^1.1.5",
+    "@astrojs/mdx": "^2.0.0",
     "@astrojs/prefetch": "^0.4.1",
-    "@astrojs/rss": "^4.0.0",
+    "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/starlight": "^0.14.0",
-    "astro": "^4.0.2",
+    "@astrojs/starlight": "0.15.0",
+    "astro": "^4.0.3",
     "astro-robots-txt": "^1.0.0"
   },
   "devDependencies": {
