@@ -41,12 +41,12 @@
     "remove:starlight": "dotenv -- turbo run remove --filter=astro-starlight"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.0.0",
+    "@astrojs/mdx": "^2.0.1",
     "@astrojs/prefetch": "^0.4.1",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/starlight": "0.15.0",
-    "astro": "^4.0.3",
+    "astro": "^4.0.4",
     "astro-robots-txt": "^1.0.0"
   },
   "devDependencies": {
