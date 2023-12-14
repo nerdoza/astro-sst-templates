@@ -1,0 +1,21 @@
+{
+  "name": "astro-i18nx",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sst bind astro dev",
+    "build": "astro build",
+    "build:bind": "sst bind astro build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "lint": "eslint .",
+    "fmt": "prettier . --write",
+    "i18n:extract": "astro-i18n extract",
+    "i18n:generate:pages": "astro-i18n generate:pages --purge",
+    "i18n:generate:types": "astro-i18n generate:types",
+    "i18n:sync": "npm run i18n:generate:pages && npm run i18n:generate:types"
+  },
+  "dependencies": {
+    "astro-i18n": "^2.1.18"
+  }
+}

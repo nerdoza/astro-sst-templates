@@ -16,6 +16,7 @@
     "dev:edge": "dotenv -- turbo run dev --filter=astro-edge",
     "dev:assets": "dotenv -- turbo run dev --filter=astro-assets",
     "dev:starlight": "dotenv -- turbo run dev --filter=astro-starlight",
+    "dev:i18n": "dotenv -- turbo run dev --filter=astro-i18nx",
     "build:ssr": "dotenv -- turbo run build:bind --filter=astro-ssr",
     "build:hybrid": "dotenv -- turbo run build:bind --filter=astro-hybrid",
     "build:streamed": "dotenv -- turbo run build:bind --filter=astro-streamed",
@@ -23,6 +24,7 @@
     "build:edge": "dotenv -- turbo run build:bind --filter=astro-edge",
     "build:assets": "dotenv -- turbo run build:bind --filter=astro-assets",
     "build:starlight": "dotenv -- turbo run build:bind --filter=astro-starlight",
+    "build:i18n": "dotenv -- turbo run build:bind --filter=astro-i18nx",
     "deploy": "dotenv -- turbo run deploy --concurrency=2 --continue",
     "deploy:ssr": "dotenv -- turbo run deploy --filter=astro-ssr",
     "deploy:hybrid": "dotenv -- turbo run deploy --filter=astro-hybrid",
@@ -31,6 +33,7 @@
     "deploy:edge": "dotenv -- turbo run deploy --filter=astro-edge",
     "deploy:assets": "dotenv -- turbo run deploy --filter=astro-assets",
     "deploy:starlight": "dotenv -- turbo run deploy --filter=astro-starlight",
+    "deploy:i18n": "dotenv -- turbo run deploy --filter=astro-i18nx",
     "remove": "dotenv -- turbo run remove --concurrency=2 --continue",
     "remove:ssr": "dotenv -- turbo run remove --filter=astro-ssr",
     "remove:hybrid": "dotenv -- turbo run remove --filter=astro-hybrid",
@@ -38,7 +41,8 @@
     "remove:static": "dotenv -- turbo run remove --filter=astro-static",
     "remove:edge": "dotenv -- turbo run remove --filter=astro-edge",
     "remove:assets": "dotenv -- turbo run remove --filter=astro-assets",
-    "remove:starlight": "dotenv -- turbo run remove --filter=astro-starlight"
+    "remove:starlight": "dotenv -- turbo run remove --filter=astro-starlight",
+    "remove:i18n": "dotenv -- turbo run remove --filter=astro-i18nx"
   },
   "dependencies": {
     "@astrojs/mdx": "^2.0.1",
