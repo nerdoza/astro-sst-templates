@@ -30,6 +30,8 @@ export default {
     Tags.of(app).add('IaC', 'SST')
     Tags.of(app).add('Stack', 'Astro + SST Templates')
 
+    app.setDefaultRemovalPolicy('destroy')
+
     app.stack(function Site({ stack }) {
       const site = new AstroSite(stack, `astro-${STAGE}`, {
         customDomain: {
