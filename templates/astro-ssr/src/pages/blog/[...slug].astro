@@ -9,7 +9,7 @@ if (slug === undefined) {
 
 const entry = await getEntry('blog', slug)
 if (entry === undefined) {
-  return Astro.response({ code: 404 })
+  return new Response(null, { status: 404 })
 }
 
 const { Content } = await entry.render()
