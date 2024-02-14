@@ -1,0 +1,21 @@
+---
+import { getEntry } from 'astro:content'
+import BlogPost from '../../layouts/BlogPost.astro'
+
+const { slug } = Astro.params
+if (slug === undefined) {
+  throw new Error('Slug is required')
+}
+
+const entry = await getEntry('blog', slug)
+if (entry === undefined) {
+  return new Response(null, { status: 404 })
+}
+
+const { Content } = await entry.render()
+---
+
+<BlogPost {...entry.data}>
+  <h1>{entry.data.title}</h1>
+  <Content />
+</BlogPost>

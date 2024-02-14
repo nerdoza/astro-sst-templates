@@ -16,6 +16,7 @@
     "dev:edge": "dotenv -- turbo run dev --filter=astro-edge",
     "dev:assets": "dotenv -- turbo run dev --filter=astro-assets",
     "dev:starlight": "dotenv -- turbo run dev --filter=astro-starlight",
+    "dev:llrt": "dotenv -- turbo run dev --filter=astro-llrt",
     "build:ssr": "dotenv -- turbo run build:bind --filter=astro-ssr",
     "build:hybrid": "dotenv -- turbo run build:bind --filter=astro-hybrid",
     "build:streamed": "dotenv -- turbo run build:bind --filter=astro-streamed",
@@ -23,6 +24,7 @@
     "build:edge": "dotenv -- turbo run build:bind --filter=astro-edge",
     "build:assets": "dotenv -- turbo run build:bind --filter=astro-assets",
     "build:starlight": "dotenv -- turbo run build:bind --filter=astro-starlight",
+    "build:llrt": "dotenv -- turbo run build:bind --filter=astro-llrt",
     "deploy": "dotenv -- turbo run deploy --concurrency=2 --continue",
     "deploy:ssr": "dotenv -- turbo run deploy --filter=astro-ssr",
     "deploy:hybrid": "dotenv -- turbo run deploy --filter=astro-hybrid",
@@ -31,6 +33,7 @@
     "deploy:edge": "dotenv -- turbo run deploy --filter=astro-edge",
     "deploy:assets": "dotenv -- turbo run deploy --filter=astro-assets",
     "deploy:starlight": "dotenv -- turbo run deploy --filter=astro-starlight",
+    "deploy:llrt": "dotenv -- turbo run deploy --filter=astro-llrt",
     "remove": "dotenv -- turbo run remove --concurrency=2 --continue",
     "remove:ssr": "dotenv -- turbo run remove --filter=astro-ssr",
     "remove:hybrid": "dotenv -- turbo run remove --filter=astro-hybrid",
@@ -38,15 +41,16 @@
     "remove:static": "dotenv -- turbo run remove --filter=astro-static",
     "remove:edge": "dotenv -- turbo run remove --filter=astro-edge",
     "remove:assets": "dotenv -- turbo run remove --filter=astro-assets",
-    "remove:starlight": "dotenv -- turbo run remove --filter=astro-starlight"
+    "remove:starlight": "dotenv -- turbo run remove --filter=astro-starlight",
+    "remove:llrt": "dotenv -- turbo run remove --filter=astro-llrt"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.0.1",
+    "@astrojs/mdx": "^2.1.1",
     "@astrojs/prefetch": "^0.4.1",
-    "@astrojs/rss": "^4.0.1",
-    "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/starlight": "0.15.0",
-    "astro": "^4.0.4",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/starlight": "0.18.0",
+    "astro": "^4.3.6",
     "astro-robots-txt": "^1.0.0"
   },
   "devDependencies": {
@@ -64,7 +68,9 @@
     "prettier-plugin-astro": "^0.12.1",
     "prettier-plugin-sort-imports": "^1.7.2",
     "sst": "file:../sst/packages/sst/dist",
-    "turbo": "latest"
+    "turbo": "latest",
+    "vite-plugin-node-polyfills": "^0.21.0",
+    "vite-plugin-top-level-await": "^1.4.1"
   },
   "packageManager": "npm@9.8.1"
 }

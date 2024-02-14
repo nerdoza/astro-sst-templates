@@ -2,7 +2,7 @@ import { AstroSite } from 'sst/constructs'
 import type { SSTConfig } from 'sst'
 import { Tags } from 'aws-cdk-lib'
 
-const STAGE = 'ssr'
+const STAGE = 'llrt'
 const SITE_HOST = process.env.SITE_HOST ?? ''
 const SITE_DOMAIN = `astro-${STAGE}.${SITE_HOST}`
 const SITE_URL = `https://${SITE_DOMAIN}`
@@ -35,6 +35,7 @@ export default {
     app.stack(function Site({ stack }) {
       const site = new AstroSite(stack, `astro-${STAGE}`, {
         memorySize: '1024 MB',
+        runtime: 'llrt.experimental',
         customDomain: {
           domainName: SITE_DOMAIN,
           hostedZone: SITE_HOST
